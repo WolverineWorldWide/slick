@@ -1568,6 +1568,19 @@
                                 }
                             }
 
+                            var pictureSources = image.siblings('source');
+                            if (pictureSources.length) {
+                                pictureSources.each(function () {
+                                    var source = $(this);
+                                    var pictureSrcSet = source.attr('data-srcset');
+                                    if (pictureSrcSet) {
+                                        source
+                                            .attr('srcset', pictureSrcSet )
+                                            .removeAttr('data-srcset');
+                                    }
+                                });
+                            }
+                            
                             image
                                 .attr('src', imageSource)
                                 .animate({ opacity: 1 }, 200, function() {
@@ -1789,6 +1802,19 @@
                         image
                             .attr('sizes', imageSizes );
                     }
+                }
+
+                var pictureSources = image.siblings('source');
+                if (pictureSources.length) {
+                    pictureSources.each(function () {
+                        var source = $(this);
+                        var pictureSrcSet = source.attr('data-srcset');
+                        if (pictureSrcSet) {
+                            source
+                                .attr('srcset', pictureSrcSet )
+                                .removeAttr('data-srcset');
+                        }
+                    });
                 }
 
                 image
