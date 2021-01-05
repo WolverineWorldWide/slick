@@ -6,9 +6,14 @@ _the last carousel you'll ever need_
 [1]: <https://github.com/kenwheeler/slick>
 
 
+#### Custom Modifications
+
 Modified to work with version 3.4 of jQuery by changing the following:
 * Changing all values passed through `.css()` to strings - https://github.com/jquery/jquery-migrate/blob/master/warnings.md#jqmigrate-use-of-number-typed-values-is-deprecated-in-jqueryfncss
 * Removing the deprecated `jQuery.type` method - https://api.jquery.com/jQuery.type/
+
+Modified to work with version 3.5.1 of jQuery by changing the following:
+* When using HTML strings with jQuery, use both opening and closing tags rather than shorthand self-closing tags
 
 #### Demo
 
